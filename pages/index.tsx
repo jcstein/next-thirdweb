@@ -21,8 +21,26 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Topbuttons />
       <Head>
+        {/* META */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en" />
+
+        {/* TITLES */}
         <title>Probably Nothing Edition Mint</title>
-        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="apple-mobile-web-app-title" content="Probably Nothing" />
+        <meta name="twitter:title" content="Probably Nothing NFT Drop" />
+        <meta property="og:title" content="Probably Nothing NFT Drop" />
+        <meta property="og:site_name" content="Probably Nothing NFT Drop" />
+
+        {/* LINKS */}
+        <link rel="canonical" href="https://probablynothing.ink" />
+        <meta name="twitter:url" content="https://probablynothing.ink" />
+        <meta property="og:url" content="https://probablynothing.ink" />
+        <meta name="twitter:site:domain" content="probablynothing.ink" />
+
+        {/* FAVICONS */}
+        <meta name="favicon" content="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -54,43 +72,30 @@ const Home: NextPage = () => {
           href="/favicon-16x16.png"
         />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <link rel="canonical" href="https://probablynothing.ink" />
 
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* THEME */}
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+
+        {/* DESCRIPTION */}
         <meta
-          name="description"
+          property="og:description"
           content="Claim your Probably Nothing NFT here."
         />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@developer_dao" />
-        <meta name="twitter:title" content="Probably Nothing NFT Drop" />
         <meta
           name="twitter:description"
           content="Claim your Probably Nothing NFT here."
         />
         <meta
-          name="twitter:image"
-          content="https://raw.githubusercontent.com/jcstein/jpegs/main/probablynothing-og.png"
-        />
-        <meta name="twitter:url" content="https://probablynothing.ink" />
-        <meta name="twitter:site:domain" content="probablynothing.ink" />
-
-        <meta property="og:site_name" content="Probably Nothing NFT Drop" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en" />
-        <meta
-          property="og:image"
-          content="https://raw.githubusercontent.com/jcstein/jpegs/main/probablynothing-og.png"
-        />
-        <meta property="og:title" content="Probably Nothing NFT Drop" />
-        <meta property="og:url" content="https://probablynothing.ink" />
-        <meta
-          property="og:description"
+          name="description"
           content="Claim your Probably Nothing NFT here."
         />
+
+        {/* TWITTER */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@developer_dao" />
+
+        {/* IMAGE */}
         <meta
           property="og:image:url"
           content="https://raw.githubusercontent.com/jcstein/jpegs/main/probablynothing-og.png"
@@ -99,11 +104,20 @@ const Home: NextPage = () => {
           property="og:image:secure_url"
           content="https://raw.githubusercontent.com/jcstein/jpegs/main/probablynothing-og.png"
         />
+        <meta
+          property="og:image"
+          content="https://raw.githubusercontent.com/jcstein/jpegs/main/probablynothing-og.png"
+        />
+        <meta
+          name="twitter:image"
+          content="https://raw.githubusercontent.com/jcstein/jpegs/main/probablynothing-og.png"
+        />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:alt" content="Probably Nothing NFT Drop" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
+        {/* PLAUSIBLE ANALYTICS */}
         <script
           defer
           data-domain="probablynothing.ink"
@@ -136,8 +150,8 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <a href="https://rainbow.me" target="_blank" rel="noopener noreferrer">
-          Made with ❤️ by your frens at 🌈
+        <a href="https://joshcs.lol" target="_blank" rel="noopener noreferrer">
+          Made with ❤️ by joshcs.eth
         </a>
       </footer>
     </div>
