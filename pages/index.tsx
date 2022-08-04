@@ -130,7 +130,9 @@ const Home: NextPage = () => {
         <Button
           colorScheme="purple"
           disabled={isLoading}
-          onClick={() => claimNft({ to: address, tokenId: 0, quantity: 1 })}
+          onClick={() =>
+            claimNft({ to: address as any, tokenId: 0, quantity: 1 })
+          }
           _hover={{ transform: "scale(1.1)" }}
           size="lg"
           mt="3"
@@ -140,7 +142,9 @@ const Home: NextPage = () => {
         <Button
           colorScheme="purple"
           disabled={isLoading}
-          onClick={() => claimNft({ to: address, tokenId: 1, quantity: 1 })}
+          onClick={() =>
+            claimNft({ to: address as any, tokenId: 1, quantity: 1 })
+          }
           _hover={{ transform: "scale(1.1)" }}
           size="lg"
           mt="3"
