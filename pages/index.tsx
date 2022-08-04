@@ -6,7 +6,7 @@ import { useEditionDrop, useClaimNFT } from "@thirdweb-dev/react";
 import { useAccount } from "wagmi";
 import { Button, Heading, Image, Avatar } from "@chakra-ui/react";
 import { GiSailboat } from "react-icons/gi";
-import Topbuttons from "./components/topbuttons";
+import Topbuttons from "./Components/topbuttons";
 
 const Home: NextPage = () => {
   const { address } = useAccount();
