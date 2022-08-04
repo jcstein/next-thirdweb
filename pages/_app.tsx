@@ -18,8 +18,14 @@ import {
 } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
 import { ThirdwebSDKProvider, ChainId } from "@thirdweb-dev/react";
-import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
-import theme from "./theme";
+import { ChakraProvider, ColorModeScript, extendTheme } from "@chakra-ui/react";
+
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: true,
+};
+
+const theme = extendTheme({ config });
 
 const activeChainId = ChainId.Rinkeby;
 
@@ -95,7 +101,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider chains={chains} theme={midnightTheme()} coolMode>
           <ThirdwebProvider wagmiClient={wagmiClient}>
-            <ColorModeScript />
+            <ColorModeScript initialColorMode={theme.config.initialColorMode} />
             <Component {...pageProps} />
           </ThirdwebProvider>
         </RainbowKitProvider>
