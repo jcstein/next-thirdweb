@@ -125,7 +125,7 @@ const Home: NextPage = () => {
       </Head>
       <Topbuttons />
       <main className={styles.main}>
-        <Heading size="lg">Probably Nothing Edition Drop</Heading>
+        <Heading size="lg">Probably Nothing NFT Edition Drop</Heading>
         {!address ? (
           <Image
             src="./probablynothing.png"
