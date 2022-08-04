@@ -2,11 +2,11 @@ import { IconButton, Flex, HStack } from "@chakra-ui/react";
 import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
 import { useColorMode } from "@chakra-ui/react";
 
-export const Topbuttons = () => {
+export default function Topbuttons() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex align="center" justify="end">
-      <HStack pt="3" pr="5">
+      <HStack pt="3">
         <IconButton
           colorScheme="purple"
           aria-label="@jcstein on GitHub"
@@ -24,4 +24,4 @@ export const Topbuttons = () => {
       </HStack>
     </Flex>
   );
-};
+}

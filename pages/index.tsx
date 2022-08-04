@@ -6,9 +6,7 @@ import { useEditionDrop, useClaimNFT } from "@thirdweb-dev/react";
 import { useAccount } from "wagmi";
 import { Button, Heading, Image, Avatar } from "@chakra-ui/react";
 import { GiSailboat } from "react-icons/gi";
-import { useColorMode } from "@chakra-ui/react";
-import { IconButton, Flex, HStack } from "@chakra-ui/react";
-import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
+import Topbuttons from "./components/topbuttons";
 
 const Home: NextPage = () => {
   const { address } = useAccount();
@@ -19,8 +17,6 @@ const Home: NextPage = () => {
   if (error) {
     console.error("failed to claim nft", error);
   }
-  const { colorMode, toggleColorMode } = useColorMode();
-
   return (
     <div className={styles.container}>
       <Head>
@@ -127,24 +123,7 @@ const Home: NextPage = () => {
           src="https://plausible.io/js/plausible.js"
         ></script>
       </Head>
-      <Flex align="center" justify="end">
-        <HStack pt="3">
-          <IconButton
-            colorScheme="purple"
-            aria-label="@jcstein on GitHub"
-            icon={<FaGithub />}
-            onClick={() =>
-              window.open("https://github.com/jcstein/next-thirdweb", "_blank")
-            }
-          />
-          <IconButton
-            onClick={toggleColorMode}
-            aria-label={`Switch from ${colorMode} mode`}
-          >
-            {colorMode === "light" ? <FaMoon /> : <FaSun />}
-          </IconButton>
-        </HStack>
-      </Flex>
+      <Topbuttons />
       <main className={styles.main}>
         <Heading size="lg">Probably Nothing Edition Drop</Heading>
         {!address ? (
