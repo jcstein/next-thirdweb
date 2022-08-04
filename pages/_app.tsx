@@ -17,8 +17,10 @@ import {
   midnightTheme,
 } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
-import { ThirdwebSDKProvider } from "@thirdweb-dev/react";
+import { ThirdwebSDKProvider, ChainId } from "@thirdweb-dev/react";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+
+const activeChainId = ChainId.Rinkeby;
 
 const { chains, provider } = configureChains(
   [chain.rinkeby],
@@ -72,21 +74,29 @@ const wagmiClient = createClient({
   provider,
 });
 
-const { data: signer } = useSigner();
+function ThirdwebProvider({ wagmiClient, children }: any) {
+  const { data: signer } = useSigner();
+  return (
+    <ThirdwebSDKProvider
+      desiredChainId={activeChainId}
+      signer={signer as any}
+      provider={wagmiClient.provider}
+      queryClient={wagmiClient.queryClient as any}
+    >
+      {children}
+    </ThirdwebSDKProvider>
+  );
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider chains={chains} theme={midnightTheme()} coolMode>
-          <ThirdwebSDKProvider
-            signer={signer}
-            provider={wagmiClient.provider}
-            queryClient={wagmiClient.queryClient}
-          >
+          <ThirdwebProvider wagmiClient={wagmiClient}>
             <ColorModeScript />
             <Component {...pageProps} />
-          </ThirdwebSDKProvider>
+          </ThirdwebProvider>
         </RainbowKitProvider>
       </WagmiConfig>
     </ChakraProvider>

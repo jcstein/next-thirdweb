@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import { useEditionDrop, useClaimNFT } from "@thirdweb-dev/react";
 import { useAccount } from "wagmi";
 import { Button } from "@chakra-ui/react";
+import { Topbuttons } from "./Components/topbuttons";
 
 const Home: NextPage = () => {
   const { address } = useAccount();
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
+      <Topbuttons />
       <Head>
         <title>RainbowKit App</title>
         <meta
