@@ -133,6 +133,7 @@ const Home: NextPage = () => {
             width="42%"
             mt="5"
             maxW="300px"
+            alt="Probably Nothing"
           />
         ) : null}
         <br />
@@ -145,6 +146,7 @@ const Home: NextPage = () => {
               width="42%"
               maxW="300px"
               mt="5"
+              alt="Probably Nothing"
             />
             <Button
               colorScheme="purple"
@@ -176,6 +178,7 @@ const Home: NextPage = () => {
               width="42%"
               maxW="300px"
               mt="5"
+              alt="JCS"
             />
             <Button
               colorScheme="purple"
