@@ -4,8 +4,9 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useEditionDrop, useClaimNFT } from "@thirdweb-dev/react";
 import { useAccount } from "wagmi";
-import { Button } from "@chakra-ui/react";
+import { Button, Heading, Image, Avatar } from "@chakra-ui/react";
 import { Topbuttons } from "./Components/topbuttons";
+import { GiSailboat } from "react-icons/gi";
 
 const Home: NextPage = () => {
   const { address } = useAccount();
@@ -124,38 +125,84 @@ const Home: NextPage = () => {
           src="https://plausible.io/js/plausible.js"
         ></script>
       </Head>
-
       <main className={styles.main}>
+        <Heading size="lg">Probably Nothing Edition Drop</Heading>
+        {!address ? (
+          <Image src="./probablynothing.png" rounded="2xl" width="42%" />
+        ) : null}
+        <br />
         <ConnectButton />
-        <Button
-          colorScheme="purple"
-          disabled={isLoading}
-          onClick={() =>
-            claimNft({ to: address as any, tokenId: 0, quantity: 1 })
-          }
-          _hover={{ transform: "scale(1.1)" }}
-          size="lg"
-          mt="3"
-        >
-          Claim JCS!
-        </Button>
-        <Button
-          colorScheme="purple"
-          disabled={isLoading}
-          onClick={() =>
-            claimNft({ to: address as any, tokenId: 1, quantity: 1 })
-          }
-          _hover={{ transform: "scale(1.1)" }}
-          size="lg"
-          mt="3"
-        >
-          Claim Probably Nothing!
-        </Button>
+        {address ? (
+          <>
+            <Image
+              src="./probablynothing.png"
+              rounded="2xl"
+              width="42%"
+              maxW="300px"
+              mt="5"
+            />
+            <Button
+              colorScheme="purple"
+              disabled={isLoading}
+              onClick={() =>
+                claimNft({ to: address as any, tokenId: 1, quantity: 1 })
+              }
+              _hover={{ transform: "scale(1.1)" }}
+              size="lg"
+              my="3"
+            >
+              Claim Probably Nothing!
+            </Button>
+            <Button
+              colorScheme="blue"
+              rightIcon={<GiSailboat />}
+              onClick={() =>
+                window.open(
+                  "https://testnets.opensea.io/assets/rinkeby/0xf1cc36db8b8c48cce1ebb41ca8050dd0c36c0897/1",
+                  "_blank"
+                )
+              }
+            >
+              View on OpenSea
+            </Button>
+            {/* <Image
+              src="./jcs.png"
+              rounded="2xl"
+              width="42%"
+              maxW="300px"
+              mt="5"
+            />
+            <Button
+              colorScheme="purple"
+              disabled={isLoading}
+              onClick={() =>
+                claimNft({ to: address as any, tokenId: 0, quantity: 1 })
+              }
+              _hover={{ transform: "scale(1.1)" }}
+              size="lg"
+              my="3"
+            >
+              Claim JCS!
+            </Button>
+            <Button
+              colorScheme="blue"
+              rightIcon={<GiSailboat />}
+              onClick={() =>
+                window.open(
+                  "https://testnets.opensea.io/assets/rinkeby/0xf1cc36db8b8c48cce1ebb41ca8050dd0c36c0897/0",
+                  "_blank"
+                )
+              }
+            >
+              View on OpenSea
+            </Button> */}
+          </>
+        ) : null}
       </main>
 
       <footer className={styles.footer}>
         <a href="https://joshcs.lol" target="_blank" rel="noopener noreferrer">
-          Made with ❤️ by joshcs.eth
+          <Avatar src="/jcs.png" mx="auto" size="full" width="5%" maxW="50px" />
         </a>
       </footer>
     </div>
