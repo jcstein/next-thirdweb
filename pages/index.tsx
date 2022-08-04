@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <meta property="og:locale" content="en" />
 
         {/* TITLES */}
-        <title>Probably Nothing Edition Mint</title>
+        <title>Probably Nothing NFT Drop</title>
         <meta name="apple-mobile-web-app-title" content="Probably Nothing" />
         <meta name="twitter:title" content="Probably Nothing NFT Drop" />
         <meta property="og:title" content="Probably Nothing NFT Drop" />
