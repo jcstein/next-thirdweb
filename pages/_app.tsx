@@ -53,7 +53,7 @@ const connectors = connectorsForWallets([
     wallets: [
       wallet.metaMask({ chains, shimDisconnect: true }),
       wallet.walletConnect({ chains }),
-      wallet.coinbase({ appName: "Ankr Multichain NFT Gallery", chains }),
+      wallet.coinbase({ appName: "probably nothing", chains }),
       wallet.rainbow({ chains }),
     ],
   },

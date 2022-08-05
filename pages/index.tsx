@@ -26,11 +26,11 @@ const Home: NextPage = () => {
         <meta property="og:locale" content="en" />
 
         {/* TITLES */}
-        <title>Probably Nothing NFT Drop</title>
-        <meta name="apple-mobile-web-app-title" content="Probably Nothing" />
-        <meta name="twitter:title" content="Probably Nothing NFT Drop" />
-        <meta property="og:title" content="Probably Nothing NFT Drop" />
-        <meta property="og:site_name" content="Probably Nothing NFT Drop" />
+        <title>probably nothing edition drop</title>
+        <meta name="apple-mobile-web-app-title" content="probably nothing" />
+        <meta name="twitter:title" content="probably nothing edition drop" />
+        <meta property="og:title" content="probably nothing edition drop" />
+        <meta property="og:site_name" content="probably nothing edition drop" />
 
         {/* LINKS */}
         <link rel="canonical" href="https://probablynothing.ink" />
@@ -79,15 +79,15 @@ const Home: NextPage = () => {
         {/* DESCRIPTION */}
         <meta
           property="og:description"
-          content="Claim your Probably Nothing NFT here."
+          content="Claim your probably nothing NFT here."
         />
         <meta
           name="twitter:description"
-          content="Claim your Probably Nothing NFT here."
+          content="Claim your probably nothing NFT here."
         />
         <meta
           name="description"
-          content="Claim your Probably Nothing NFT here."
+          content="Claim your probably nothing NFT here."
         />
 
         {/* TWITTER */}
@@ -112,7 +112,7 @@ const Home: NextPage = () => {
           content="https://raw.githubusercontent.com/jcstein/jpegs/main/probablynothing-og.png"
         />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:alt" content="Probably Nothing NFT Drop" />
+        <meta property="og:image:alt" content="probably nothing edition drop" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
       <Topbuttons />
       <main className={styles.main}>
         <Heading size="xl" textAlign="center">
-          Probably Nothing Edition Drop
+          probably nothing edition drop
         </Heading>
         {!address ? (
           <Image
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
             width="42%"
             mt="5"
             maxW="300px"
-            alt="Probably Nothing"
+            alt="probably nothing"
           />
         ) : null}
         <br />
@@ -154,7 +154,7 @@ const Home: NextPage = () => {
               maxW="300px"
               mt="5"
               mb="3"
-              alt="Probably Nothing"
+              alt="probably nothing"
             />
             {/* <Text>0 out of ∞ Minted</Text> */}
             {isLoading ? (
@@ -162,7 +162,7 @@ const Home: NextPage = () => {
                 colorScheme="purple"
                 disabled={isLoading}
                 isLoading
-                loadingText="Minting..."
+                loadingText="minting..."
                 spinnerPlacement="start"
                 _hover={{ transform: "scale(1.1)" }}
                 size="lg"
@@ -179,7 +179,7 @@ const Home: NextPage = () => {
                 size="lg"
                 my="3"
               >
-                Claim Probably Nothing!
+                claim probably nothing!
               </Button>
             )}
             <Button
@@ -192,7 +192,7 @@ const Home: NextPage = () => {
                 )
               }
             >
-              View on OpenSea
+              view on opensea
             </Button>
           </>
         ) : null}
