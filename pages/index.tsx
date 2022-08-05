@@ -115,13 +115,6 @@ const Home: NextPage = () => {
         <meta property="og:image:alt" content="probably nothing edition drop" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-
-        {/* PLAUSIBLE ANALYTICS */}
-        <script
-          defer
-          data-domain="probablynothing.ink"
-          src="https://plausible.io/js/plausible.js"
-        ></script>
       </Head>
       <Topbuttons />
       <main className={styles.main}>
