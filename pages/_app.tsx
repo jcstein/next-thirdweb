@@ -24,8 +24,12 @@ const config = {
   initialColorMode: "dark",
   useSystemColorMode: true,
 };
+const fonts = {
+  heading: `"Inter", sans-serif`,
+  body: `"Inter", sans-serif`,
+};
 
-const theme = extendTheme({ config });
+const theme = extendTheme({ config, fonts });
 
 const activeChainId = ChainId.Rinkeby;
 
