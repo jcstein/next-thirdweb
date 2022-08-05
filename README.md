@@ -1,4 +1,4 @@
-This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) project bootstrapped with [`create-rainbowkit`](https://github.com/rainbow-me/rainbowkit/tree/main/packages/create-rainbowkit).
+This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) + [Chakra UI-(https://chakra-ui.com/) project bootstrapped with [`create-rainbowkit`](https://github.com/rainbow-me/rainbowkit/tree/main/packages/create-rainbowkit).
 
 ## Getting Started
 
@@ -19,6 +19,7 @@ To learn more about this stack, take a look at the following resources:
 - [RainbowKit Documentation](https://rainbowkit.com) - Learn how to customize your wallet connection flow.
 - [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
 - [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
+- [Chakra UI Documentation](https://chakra-ui.com/) - Learn how to build an accessible UI.
 
 You can check out [the RainbowKit GitHub repository](https://github.com/rainbow-me/rainbowkit) - your feedback and contributions are welcome!
 
