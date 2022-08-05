@@ -125,11 +125,13 @@ const Home: NextPage = () => {
       </Head>
       <Topbuttons />
       <main className={styles.main}>
-        <Heading size="lg">Probably Nothing NFT Edition Drop</Heading>
+        <Heading size="xl" textAlign="center">
+          Probably Nothing Edition Drop
+        </Heading>
         {!address ? (
           <Image
             src="./probablynothing.png"
-            rounded="2xl"
+            rounded="full"
             width="42%"
             mt="5"
             maxW="300px"
@@ -137,6 +139,11 @@ const Home: NextPage = () => {
           />
         ) : null}
         <br />
+        {!address ? (
+          <Heading pb="5" size="lg">
+            gm
+          </Heading>
+        ) : null}
         <ConnectButton />
         {address ? (
           <>
@@ -146,58 +153,41 @@ const Home: NextPage = () => {
               width="42%"
               maxW="300px"
               mt="5"
+              mb="3"
               alt="Probably Nothing"
             />
-            <Button
-              colorScheme="purple"
-              disabled={isLoading}
-              onClick={() =>
-                claimNft({ to: address as any, tokenId: 1, quantity: 1 })
-              }
-              _hover={{ transform: "scale(1.1)" }}
-              size="lg"
-              my="3"
-            >
-              Claim Probably Nothing!
-            </Button>
+            {/* <Text>0 out of ∞ Minted</Text> */}
+            {isLoading ? (
+              <Button
+                colorScheme="purple"
+                disabled={isLoading}
+                isLoading
+                loadingText="Minting..."
+                spinnerPlacement="start"
+                _hover={{ transform: "scale(1.1)" }}
+                size="lg"
+                my="3"
+              />
+            ) : (
+              <Button
+                colorScheme="purple"
+                disabled={isLoading}
+                onClick={() =>
+                  claimNft({ to: address as any, tokenId: 1, quantity: 1 })
+                }
+                _hover={{ transform: "scale(1.1)" }}
+                size="lg"
+                my="3"
+              >
+                Claim Probably Nothing!
+              </Button>
+            )}
             <Button
               colorScheme="blue"
               rightIcon={<GiSailboat />}
               onClick={() =>
                 window.open(
                   "https://testnets.opensea.io/assets/rinkeby/0xf1cc36db8b8c48cce1ebb41ca8050dd0c36c0897/1",
-                  "_blank"
-                )
-              }
-            >
-              View on OpenSea
-            </Button>
-            <Image
-              src="./jcs.png"
-              rounded="2xl"
-              width="42%"
-              maxW="300px"
-              mt="5"
-              alt="JCS"
-            />
-            <Button
-              colorScheme="purple"
-              disabled={isLoading}
-              onClick={() =>
-                claimNft({ to: address as any, tokenId: 0, quantity: 1 })
-              }
-              _hover={{ transform: "scale(1.1)" }}
-              size="lg"
-              my="3"
-            >
-              Claim JCS!
-            </Button>
-            <Button
-              colorScheme="blue"
-              rightIcon={<GiSailboat />}
-              onClick={() =>
-                window.open(
-                  "https://testnets.opensea.io/assets/rinkeby/0xf1cc36db8b8c48cce1ebb41ca8050dd0c36c0897/0",
                   "_blank"
                 )
               }
