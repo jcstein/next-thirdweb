@@ -32,15 +32,15 @@ const fonts = {
 
 const theme = extendTheme({ config, fonts });
 
-const activeChainId = ChainId.Rinkeby;
+const activeChainId = ChainId.Mainnet;
 
 const { chains, provider } = configureChains(
-  [chain.rinkeby],
+  [chain.mainnet],
   [
     jsonRpcProvider({
       rpc: () => {
         return {
-          http: "https://rpc.ankr.com/eth_rinkeby",
+          http: "https://rpc.ankr.com/eth",
         };
       },
     }),

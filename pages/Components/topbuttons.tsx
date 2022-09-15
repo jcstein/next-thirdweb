@@ -1,5 +1,5 @@
 import { IconButton, Flex, HStack } from "@chakra-ui/react";
-import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
+import { FaMoon, FaSun, FaGithub, FaTwitter } from "react-icons/fa";
 import { useColorMode } from "@chakra-ui/react";
 
 export default function Topbuttons() {
@@ -7,6 +7,14 @@ export default function Topbuttons() {
   return (
     <Flex align="center" justify="end">
       <HStack pt="3">
+        <IconButton
+          colorScheme="purple"
+          aria-label="@JoshCStein on Twitter"
+          icon={<FaTwitter />}
+          onClick={() =>
+            window.open("https://twitter.com/JoshCStein", "_blank")
+          }
+        />
         <IconButton
           colorScheme="purple"
           aria-label="@jcstein on GitHub"

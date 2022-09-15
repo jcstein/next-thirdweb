@@ -11,7 +11,7 @@ import Topbuttons from "./Components/topbuttons";
 const Home: NextPage = () => {
   const { address } = useAccount();
   const editionDrop = useEditionDrop(
-    "0xF1cC36db8b8C48cCe1ebb41Ca8050dd0C36c0897"
+    "0x4f72c28340c5a18Ae59571124a8aCd3aD1947141"
   );
   const { mutate: claimNft, isLoading, error } = useClaimNFT(editionDrop);
   if (error) {
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
                 colorScheme="purple"
                 disabled={isLoading}
                 onClick={() =>
-                  claimNft({ to: address as any, tokenId: 1, quantity: 1 })
+                  claimNft({ to: address as any, tokenId: 0, quantity: 1 })
                 }
                 _hover={{ transform: "scale(1.1)" }}
                 size="lg"
@@ -180,7 +180,7 @@ const Home: NextPage = () => {
               rightIcon={<GiSailboat />}
               onClick={() =>
                 window.open(
-                  "https://testnets.opensea.io/assets/rinkeby/0xf1cc36db8b8c48cce1ebb41ca8050dd0c36c0897/1",
+                  "https://opensea.io/assets/0x4f72c28340c5a18Ae59571124a8aCd3aD1947141/0",
                   "_blank"
                 )
               }
