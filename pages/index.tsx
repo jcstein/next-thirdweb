@@ -7,6 +7,7 @@ import { useAccount } from "wagmi";
 import { Button, Heading, Image, Avatar, Text, VStack } from "@chakra-ui/react";
 import { GiSailboat } from "react-icons/gi";
 import Topbuttons from "./Components/topbuttons";
+import { FaCode } from "react-icons/fa";
 
 const Home: NextPage = () => {
   const { address } = useAccount();
@@ -195,7 +196,7 @@ const Home: NextPage = () => {
             </Button>
             <Button
               colorScheme="blue"
-              rightIcon={<GiSailboat />}
+              rightIcon={<FaCode />}
               onClick={() =>
                 window.open(
                   "https://etherscan.io/address/0x4f72c28340c5a18ae59571124a8acd3ad1947141#code",

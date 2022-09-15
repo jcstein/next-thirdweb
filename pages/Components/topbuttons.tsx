@@ -1,5 +1,5 @@
-import { IconButton, Flex, HStack } from "@chakra-ui/react";
-import { FaMoon, FaSun, FaGithub, FaTwitter } from "react-icons/fa";
+import { IconButton, Flex, HStack, Button } from "@chakra-ui/react";
+import { FaMoon, FaSun, FaGithub, FaTwitter, FaCode } from "react-icons/fa";
 import { useColorMode } from "@chakra-ui/react";
 
 export default function Topbuttons() {
@@ -7,6 +7,18 @@ export default function Topbuttons() {
   return (
     <Flex align="center" justify="end">
       <HStack pt="3">
+        <Button
+          colorScheme="green"
+          leftIcon={<FaCode />}
+          onClick={() =>
+            window.open(
+              "https://etherscan.io/address/0x4f72c28340c5a18ae59571124a8acd3ad1947141#code",
+              "_blank"
+            )
+          }
+        >
+          contract
+        </Button>
         <IconButton
           colorScheme="purple"
           aria-label="@JoshCStein on Twitter"
