@@ -4,7 +4,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useEditionDrop, useClaimNFT } from "@thirdweb-dev/react";
 import { useAccount } from "wagmi";
-import { Button, Heading, Image, Avatar } from "@chakra-ui/react";
+import { Button, Heading, Image, Avatar, Text, VStack } from "@chakra-ui/react";
 import { GiSailboat } from "react-icons/gi";
 import Topbuttons from "./Components/topbuttons";
 
@@ -133,9 +133,14 @@ const Home: NextPage = () => {
         ) : null}
         <br />
         {!address ? (
-          <Heading pb="5" size="lg">
-            gm
-          </Heading>
+          <VStack>
+            <Heading pb="3" size="lg">
+              gm
+            </Heading>
+            <Text textAlign="center" pb="5">
+              connect your wallet to mint your probably nothing ✨
+            </Text>
+          </VStack>
         ) : null}
         <ConnectButton />
         {address ? (
@@ -184,8 +189,21 @@ const Home: NextPage = () => {
                   "_blank"
                 )
               }
+              my="3"
             >
               view on opensea
+            </Button>
+            <Button
+              colorScheme="blue"
+              rightIcon={<GiSailboat />}
+              onClick={() =>
+                window.open(
+                  "https://etherscan.io/address/0x4f72c28340c5a18ae59571124a8acd3ad1947141#code",
+                  "_blank"
+                )
+              }
+            >
+              contract on etherscan
             </Button>
           </>
         ) : null}
