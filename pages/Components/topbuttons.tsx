@@ -1,5 +1,6 @@
 import { IconButton, Flex, HStack, Button } from "@chakra-ui/react";
 import { FaMoon, FaSun, FaGithub, FaTwitter, FaCode } from "react-icons/fa";
+import { GiSailboat } from "react-icons/gi";
 import { useColorMode } from "@chakra-ui/react";
 
 export default function Topbuttons() {
@@ -19,6 +20,18 @@ export default function Topbuttons() {
         >
           contract
         </Button>
+        <IconButton
+          colorScheme="blue"
+          aria-label="probably nothing on opensea"
+          icon={<GiSailboat />}
+          onClick={() =>
+            window.open(
+              "https://opensea.io/assets/0x4f72c28340c5a18Ae59571124a8aCd3aD1947141/0",
+              "_blank"
+            )
+          }
+          my="3"
+        ></IconButton>
         <IconButton
           colorScheme="purple"
           aria-label="@JoshCStein on Twitter"
